@@ -69,6 +69,14 @@ const MainContent = ({ currentView, selectedPlaylist, onBack, searchQuery }) => 
     return <PlaylistView playlist={selectedPlaylist} onBack={onBack} />;
   }
 
+  if (currentView === 'artist' && selectedPlaylist) {
+    return <ArtistView artist={selectedPlaylist} onBack={onBack} />;
+  }
+
+  if (currentView === 'album' && selectedPlaylist) {
+    return <PlaylistView playlist={selectedPlaylist} onBack={onBack} />;
+  }
+
   return (
     <div className="flex-1 bg-gradient-to-b from-gray-900 to-black overflow-y-auto">
       <div className="p-6">
