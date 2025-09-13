@@ -424,6 +424,101 @@ export const mockRecentlyPlayed = [
     title: 'Bad Guy',
     artist: 'Billie Eilish',
     image: 'https://images.pexels.com/photos/8044161/pexels-photo-8044161.jpeg?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'rp4',
+    title: 'Anti-Hero',
+    artist: 'Taylor Swift',
+    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'rp5',
+    title: 'Flowers',
+    artist: 'Miley Cyrus',
+    image: 'https://images.unsplash.com/photo-1501837303764-ada599fdac6c?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'rp6',
+    title: 'Unholy',
+    artist: 'Sam Smith, Kim Petras',
+    image: 'https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?w=300&h=300&fit=crop'
+  }
+];
+
+export const mockPopularPlaylists = [
+  {
+    id: 'pp1',
+    title: 'Hot Country',
+    artist: 'The hottest country music',
+    image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'pp2',
+    title: 'Rock This',
+    artist: 'The biggest rock songs',
+    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'pp3',
+    title: 'Mood Booster',
+    artist: 'Songs to make you happy',
+    image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'pp4',
+    title: 'Throwback Thursday',
+    artist: 'Classic hits from the past',
+    image: 'https://images.pexels.com/photos/2885788/pexels-photo-2885788.jpeg?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'pp5',
+    title: 'Workout',
+    artist: 'High energy tracks for your workout',
+    image: 'https://images.unsplash.com/photo-1629923759854-156b88c433aa?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'pp6',
+    title: 'Jazz Classics',
+    artist: 'Timeless jazz standards',
+    image: 'https://images.unsplash.com/photo-1644855640845-ab57a047320e?w=300&h=300&fit=crop'
+  }
+];
+
+export const mockFeaturedArtists = [
+  {
+    id: 'fa1',
+    name: 'Taylor Swift',
+    type: 'artist',
+    image: 'https://images.unsplash.com/photo-1501837303764-ada599fdac6c?w=300&h=300&fit=crop',
+    followers: '92,000,000'
+  },
+  {
+    id: 'fa2',
+    name: 'Drake',
+    type: 'artist',
+    image: 'https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?w=300&h=300&fit=crop',
+    followers: '89,000,000'
+  },
+  {
+    id: 'fa3',
+    name: 'Ariana Grande',
+    type: 'artist',
+    image: 'https://images.pexels.com/photos/9001962/pexels-photo-9001962.jpeg?w=300&h=300&fit=crop',
+    followers: '87,000,000'
+  },
+  {
+    id: 'fa4',
+    name: 'The Weeknd',
+    type: 'artist',
+    image: 'https://images.unsplash.com/photo-1507246249828-b7a6c99f2ce1?w=300&h=300&fit=crop',
+    followers: '85,000,000'
+  },
+  {
+    id: 'fa5',
+    name: 'Billie Eilish',
+    type: 'artist',
+    image: 'https://images.pexels.com/photos/8044161/pexels-photo-8044161.jpeg?w=300&h=300&fit=crop',
+    followers: '81,000,000'
   }
 ];
 
