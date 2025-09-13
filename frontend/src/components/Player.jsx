@@ -77,7 +77,10 @@ const Player = ({ onRightPanelToggle, isRightPanelVisible, onNowPlayingToggle })
   return (
     <div className="h-20 bg-black border-t border-gray-800 flex items-center px-4">
       {/* Current Track Info */}
-      <div className="flex items-center gap-3 w-80 min-w-0">
+      <div 
+        className="flex items-center gap-3 w-80 min-w-0 cursor-pointer hover:bg-gray-800 rounded-lg p-2 -m-2 transition-colors"
+        onClick={onNowPlayingToggle}
+      >
         <img 
           src={currentTrack.image} 
           alt={currentTrack.title}
@@ -87,15 +90,18 @@ const Player = ({ onRightPanelToggle, isRightPanelVisible, onNowPlayingToggle })
           }}
         />
         <div className="flex-1 min-w-0">
-          <div className="text-white text-sm font-medium truncate">
+          <div className="text-white text-sm font-medium truncate hover:underline">
             {currentTrack.title}
           </div>
-          <div className="text-gray-400 text-xs truncate">
+          <div className="text-gray-400 text-xs truncate hover:text-gray-300">
             {currentTrack.artist}
           </div>
         </div>
         <button 
-          onClick={() => toggleLike(currentTrack.id)}
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleLike(currentTrack.id);
+          }}
           className={`transition-colors ${
             isLiked(currentTrack.id) 
               ? 'text-green-500' 
