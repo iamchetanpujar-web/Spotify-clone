@@ -4,6 +4,7 @@ import { mockDailyMixes, mockJafikiData, mockRecentlyPlayed, mockSongs } from '.
 import { useAudio } from './AudioManager';
 import PlaylistView from './PlaylistView';
 import SearchResults from './SearchResults';
+import ArtistView from './ArtistView';
 
 const MainContent = ({ currentView, selectedPlaylist, onBack, searchQuery }) => {
   const { currentTrack, isPlaying, playTrack, togglePlayPause } = useAudio();
