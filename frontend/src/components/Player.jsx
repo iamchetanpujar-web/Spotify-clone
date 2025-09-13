@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { 
   Play, 
   Pause, 
@@ -12,58 +12,57 @@ import {
   Monitor,
   VolumeX,
   Volume1,
-  Maximize2
+  Maximize2,
+  Heart
 } from 'lucide-react';
+import { useAudio } from './AudioManager';
 
-const Player = ({ currentTrack, isPlaying, onPlayPause, onNext, onPrevious, onRightPanelToggle, isRightPanelVisible }) => {
-  const [volume, setVolume] = useState(50);
-  const [isMuted, setIsMuted] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [isShuffled, setIsShuffled] = useState(false);
-  const [repeatMode, setRepeatMode] = useState(0); // 0: off, 1: all, 2: one
-
-  useEffect(() => {
-    if (currentTrack && isPlaying) {
-      const interval = setInterval(() => {
-        setCurrentTime(prev => {
-          if (prev >= currentTrack.duration) {
-            return 0;
-          }
-          return prev + 1;
-        });
-      }, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [isPlaying, currentTrack]);
+const Player = ({ onRightPanelToggle, isRightPanelVisible }) => {
+  const {
+    currentTrack,
+    isPlaying,
+    currentTime,
+    duration,
+    volume,
+    isMuted,
+    isShuffled,
+    repeatMode,
+    togglePlayPause,
+    handleNext,
+    handlePrevious,
+    seekTo,
+    setVolumeLevel,
+    toggleMute,
+    toggleShuffle,
+    toggleRepeat,
+    toggleLike,
+    isLiked
+  } = useAudio();
 
   const formatTime = (seconds) => {
+    if (!seconds || isNaN(seconds)) return '0:00';
     const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
+    const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   };
 
   const handleProgressChange = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const percent = (e.clientX - rect.left) / rect.width;
-    const newTime = Math.floor(percent * (currentTrack?.duration || 0));
-    setCurrentTime(newTime);
+    const newTime = percent * (duration || 0);
+    seekTo(newTime);
   };
 
   const handleVolumeChange = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const percent = (e.clientX - rect.left) / rect.width;
-    const newVolume = Math.max(0, Math.min(100, Math.floor(percent * 100)));
-    setVolume(newVolume);
-    setIsMuted(newVolume === 0);
-  };
-
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
+    const newVolume = Math.max(0, Math.min(1, percent));
+    setVolumeLevel(newVolume);
   };
 
   const VolumeIcon = () => {
     if (isMuted || volume === 0) return <VolumeX size={16} />;
-    if (volume < 50) return <Volume1 size={16} />;
+    if (volume < 0.5) return <Volume1 size={16} />;
     return <Volume2 size={16} />;
   };
 
