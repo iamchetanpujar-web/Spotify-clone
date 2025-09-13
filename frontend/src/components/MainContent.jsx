@@ -1,8 +1,11 @@
 import React from 'react';
 import { Play, Pause, MoreHorizontal } from 'lucide-react';
-import { mockDailyMixes, mockJafikiData, mockRecentlyPlayed } from '../mock';
+import { mockDailyMixes, mockJafikiData, mockRecentlyPlayed, mockSongs } from '../mock';
+import { useAudio } from './AudioManager';
+import PlaylistView from './PlaylistView';
 
-const MainContent = ({ currentView, selectedPlaylist, isPlaying, onPlayPause, currentTrack, onTrackSelect }) => {
+const MainContent = ({ currentView, selectedPlaylist, onBack }) => {
+  const { currentTrack, isPlaying, playTrack, togglePlayPause } = useAudio();
   
   const PlayButton = ({ onClick, isCurrentPlaying, size = "w-12 h-12" }) => (
     <button 
