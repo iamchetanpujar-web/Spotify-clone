@@ -5,13 +5,11 @@ import TopBar from './components/TopBar';
 import MainContent from './components/MainContent';
 import RightPanel from './components/RightPanel';
 import Player from './components/Player';
-import { mockCurrentTrack } from './mock';
+import { AudioProvider } from './components/AudioManager';
 
 function App() {
   const [currentView, setCurrentView] = useState('home');
   const [selectedPlaylist, setSelectedPlaylist] = useState(null);
-  const [currentTrack, setCurrentTrack] = useState(mockCurrentTrack);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isRightPanelVisible, setIsRightPanelVisible] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -24,23 +22,9 @@ function App() {
     }
   };
 
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const handleTrackSelect = (track) => {
-    setCurrentTrack(track);
-    setIsPlaying(true);
-  };
-
-  const handleNext = () => {
-    // Mock next track functionality
-    console.log('Next track');
-  };
-
-  const handlePrevious = () => {
-    // Mock previous track functionality
-    console.log('Previous track');
+  const handleBack = () => {
+    setCurrentView('home');
+    setSelectedPlaylist(null);
   };
 
   const handleSearch = (query) => {
