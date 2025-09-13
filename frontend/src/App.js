@@ -13,6 +13,7 @@ function App() {
   const [currentView, setCurrentView] = useState('home');
   const [selectedPlaylist, setSelectedPlaylist] = useState(null);
   const [isRightPanelVisible, setIsRightPanelVisible] = useState(true);
+  const [isNowPlayingVisible, setIsNowPlayingVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleNavigation = (view, data = null) => {
