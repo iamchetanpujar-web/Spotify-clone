@@ -282,7 +282,7 @@ export const mockPlaylists = [
     artist: 'Spotify',
     image: 'https://images.unsplash.com/photo-1644855640845-ab57a047320e?w=300&h=300&fit=crop',
     description: 'The biggest songs right now',
-    songs: ['jb1', 'jb2', 'es1', 'es2', 'tw1', 'be1', 'hs1', 'or1'],
+    songs: ['ts1', 'ts2', 'or1', 'or2', 'ag1', 'ag2', 'dl1', 'dl2', 'jb1', 'jb2', 'es1', 'es2', 'tw1', 'be1', 'hs1'],
     songCount: 8,
     totalDuration: 1654
   },
