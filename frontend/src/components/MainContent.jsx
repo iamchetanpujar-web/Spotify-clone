@@ -103,12 +103,6 @@ const MainContent = ({ currentView, selectedPlaylist, onBack }) => {
               <MusicCard 
                 key={mix.id}
                 item={mix}
-                onPlay={() => onTrackSelect({
-                  id: mix.id,
-                  title: mix.title,
-                  artist: 'Various Artists',
-                  image: mix.image
-                })}
               />
             ))}
           </div>
