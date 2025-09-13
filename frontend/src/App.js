@@ -41,6 +41,10 @@ function App() {
     setIsRightPanelVisible(!isRightPanelVisible);
   };
 
+  const toggleNowPlaying = () => {
+    setIsNowPlayingVisible(!isNowPlayingVisible);
+  };
+
   return (
     <AudioProvider>
       <div className="h-screen bg-black text-white flex flex-col overflow-hidden">
