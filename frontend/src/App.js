@@ -42,6 +42,8 @@ function App() {
   return (
     <AudioProvider>
       <div className="h-screen bg-black text-white flex flex-col overflow-hidden">
+        <KeyboardShortcuts />
+        
         {/* Top Bar */}
         <TopBar 
           onSearch={handleSearch}
@@ -78,6 +80,11 @@ function App() {
           onRightPanelToggle={toggleRightPanel}
           isRightPanelVisible={isRightPanelVisible}
         />
+        
+        {/* Keyboard Shortcuts Indicator */}
+        <div className="fixed bottom-4 right-4 bg-gray-900 text-gray-400 text-xs p-2 rounded opacity-75 pointer-events-none">
+          Press Space to play/pause • Ctrl+← → for prev/next
+        </div>
       </div>
     </AudioProvider>
   );
