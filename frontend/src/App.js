@@ -6,6 +6,7 @@ import MainContent from './components/MainContent';
 import RightPanel from './components/RightPanel';
 import Player from './components/Player';
 import { AudioProvider } from './components/AudioManager';
+import KeyboardShortcuts from './components/KeyboardShortcuts';
 
 function App() {
   const [currentView, setCurrentView] = useState('home');
