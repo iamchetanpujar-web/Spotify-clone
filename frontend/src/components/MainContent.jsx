@@ -71,39 +71,7 @@ const MainContent = ({ currentView, selectedPlaylist, onBack }) => {
   }
 
   if (currentView === 'playlist' && selectedPlaylist) {
-    return (
-      <div className="flex-1 bg-gradient-to-b from-gray-900 to-black">
-        <div className="p-6">
-          <div className="flex items-end gap-6 mb-8">
-            <img 
-              src={selectedPlaylist.image} 
-              alt={selectedPlaylist.name}
-              className="w-60 h-60 object-cover rounded-lg shadow-2xl"
-            />
-            <div className="flex-1">
-              <p className="text-sm font-medium text-white uppercase tracking-wider mb-2">
-                {selectedPlaylist.type}
-              </p>
-              <h1 className="text-6xl font-bold text-white mb-6">{selectedPlaylist.name}</h1>
-              <div className="flex items-center gap-2 text-sm text-gray-300">
-                {selectedPlaylist.artist && <span>{selectedPlaylist.artist}</span>}
-                {selectedPlaylist.songCount && (
-                  <>
-                    <span>•</span>
-                    <span>{selectedPlaylist.songCount} songs</span>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-          
-          <div className="flex items-center gap-6 mb-8">
-            <PlayButton onClick={onPlayPause} isCurrentPlaying={isPlaying} />
-            <MoreHorizontal size={32} className="text-gray-400 hover:text-white cursor-pointer" />
-          </div>
-        </div>
-      </div>
-    );
+    return <PlaylistView playlist={selectedPlaylist} onBack={onBack} />;
   }
 
   return (
