@@ -193,22 +193,22 @@ export const mockPlaylists = [
   },
   {
     id: '3',
-    name: 'wild wild bollywood',
+    name: 'Today\'s Top Hits',
     type: 'playlist',
-    artist: 'sarthak.joshi',
+    artist: 'Spotify',
     image: 'https://images.unsplash.com/photo-1644855640845-ab57a047320e?w=300&h=300&fit=crop',
-    description: 'Best of Bollywood music',
-    songs: ['jb1', 'jb2', 'es1', 'es2'],
-    songCount: 4,
-    totalDuration: 903
+    description: 'The biggest songs right now',
+    songs: ['jb1', 'jb2', 'es1', 'es2', 'tw1', 'be1', 'hs1', 'or1'],
+    songCount: 8,
+    totalDuration: 1654
   },
   {
     id: '4',
-    name: 'Top Trending India | English Songs...',
+    name: 'RapCaviar',
     type: 'playlist',
-    artist: 'Digster India',
+    artist: 'Spotify',
     image: 'https://images.pexels.com/photos/2191013/pexels-photo-2191013.jpeg?w=300&h=300&fit=crop',
-    description: 'The hottest tracks right now',
+    description: 'New music from hip hop\'s biggest stars',
     songs: ['tw1', 'tw2', 'be1', 'be2', 'hs1', 'or1'],
     songCount: 6,
     totalDuration: 1142
