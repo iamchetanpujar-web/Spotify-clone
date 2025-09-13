@@ -261,7 +261,7 @@ export const mockPlaylists = [
     image: 'https://images.unsplash.com/photo-1629923759854-156b88c433aa?w=300&h=300&fit=crop',
     isLiked: true,
     description: 'Your favorite songs all in one place',
-    songs: ['jb1', 'es1', 'tw1', 'be1', 'hs1', 'or1', 'jb2', 'es2', 'tw2', 'be2'],
+    songs: ['jb1', 'es1', 'tw1', 'be1', 'hs1', 'or1', 'jb2', 'es2', 'tw2', 'be2', 'ts1', 'ts2', 'dr1', 'dr2', 'ag1', 'ag2', 'dl1', 'dl2'],
     totalDuration: 2156
   },
   {
