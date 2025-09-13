@@ -94,10 +94,15 @@ const Player = ({ onRightPanelToggle, isRightPanelVisible }) => {
             {currentTrack.artist}
           </div>
         </div>
-        <button className="text-green-500 hover:text-green-400 transition-colors">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z"/>
-          </svg>
+        <button 
+          onClick={() => toggleLike(currentTrack.id)}
+          className={`transition-colors ${
+            isLiked(currentTrack.id) 
+              ? 'text-green-500' 
+              : 'text-gray-400 hover:text-white'
+          }`}
+        >
+          <Heart size={16} className={isLiked(currentTrack.id) ? 'fill-green-500' : ''} />
         </button>
       </div>
 
