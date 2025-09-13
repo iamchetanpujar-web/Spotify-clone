@@ -100,15 +100,15 @@ const MainContent = ({ currentView, selectedPlaylist, onBack, searchQuery }) => 
           </button>
         </div>
 
-        {/* Made For Section */}
+        {/* Made For You Section */}
         <section className="mb-12">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-white">Made For Chetu</h2>
+            <h2 className="text-2xl font-bold text-white">Made for you</h2>
             <button className="text-sm font-medium text-gray-400 hover:text-white hover:underline">
               Show all
             </button>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {mockDailyMixes.map((mix) => (
               <MusicCard 
                 key={mix.id}
@@ -118,20 +118,66 @@ const MainContent = ({ currentView, selectedPlaylist, onBack, searchQuery }) => 
           </div>
         </section>
 
-        {/* Jafiki Section */}
+        {/* Popular Playlists Section */}
         <section className="mb-12">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-white">More like Jafiki</h2>
+            <h2 className="text-2xl font-bold text-white">Popular playlists</h2>
             <button className="text-sm font-medium text-gray-400 hover:text-white hover:underline">
               Show all
             </button>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {mockJafikiData.map((item) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {mockPopularPlaylists.map((playlist) => (
+              <MusicCard 
+                key={playlist.id}
+                item={playlist}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Discover Weekly Section */}
+        <section className="mb-12">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-white">Your weekly discoveries</h2>
+            <button className="text-sm font-medium text-gray-400 hover:text-white hover:underline">
+              Show all
+            </button>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {mockDiscoverWeekly.map((item) => (
               <MusicCard 
                 key={item.id}
                 item={item}
               />
+            ))}
+          </div>
+        </section>
+
+        {/* Featured Artists Section */}
+        <section className="mb-12">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-white">Popular artists</h2>
+            <button className="text-sm font-medium text-gray-400 hover:text-white hover:underline">
+              Show all
+            </button>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {mockFeaturedArtists.map((artist) => (
+              <div key={artist.id} className="bg-gray-900 p-4 rounded-lg hover:bg-gray-800 transition-colors group cursor-pointer">
+                <div className="relative mb-4">
+                  <img 
+                    src={artist.image} 
+                    alt={artist.name}
+                    className="w-full aspect-square object-cover rounded-full"
+                  />
+                  <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <PlayButton onClick={() => handleCardPlay(artist)} />
+                  </div>
+                </div>
+                <h3 className="text-white font-medium text-sm truncate">{artist.name}</h3>
+                <p className="text-gray-400 text-xs">Artist</p>
+              </div>
             ))}
           </div>
         </section>
