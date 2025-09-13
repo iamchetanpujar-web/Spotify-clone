@@ -341,30 +341,42 @@ export const mockDailyMixes = [
   }
 ];
 
-export const mockJafikiData = [
+export const mockDiscoverWeekly = [
   {
-    id: 'j1',
-    title: 'Green Gang',
-    artist: 'The Boys',
+    id: 'dw1',
+    title: 'Discover Weekly',
+    artist: 'Your weekly mixtape of fresh music',
     image: 'https://images.unsplash.com/photo-1629923759854-156b88c433aa?w=300&h=300&fit=crop'
   },
   {
-    id: 'j2',
-    title: 'Big Gay',
-    artist: 'Artist',
+    id: 'dw2',
+    title: 'Release Radar',
+    artist: 'Catch all the latest music from artists you follow',
     image: 'https://images.unsplash.com/photo-1644855640845-ab57a047320e?w=300&h=300&fit=crop'
   },
   {
-    id: 'j3',
-    title: 'The perfect mixtape for an anime fight...',
-    artist: '',
+    id: 'dw3',
+    title: 'Pop Hits',
+    artist: 'The biggest pop songs right now',
     image: 'https://images.unsplash.com/photo-1587731556938-38755b4803a6?w=300&h=300&fit=crop'
   },
   {
-    id: 'j4',
-    title: 'The Boys',
-    artist: 'Artist',
+    id: 'dw4',
+    title: 'Hip Hop Central',
+    artist: 'The hottest tracks in hip hop',
     image: 'https://images.pexels.com/photos/2191013/pexels-photo-2191013.jpeg?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'dw5',
+    title: 'Rock Classics',
+    artist: 'Timeless rock anthems',
+    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'dw6',
+    title: 'Chill Vibes',
+    artist: 'Laid back songs to help you relax',
+    image: 'https://images.unsplash.com/photo-1507246249828-b7a6c99f2ce1?w=300&h=300&fit=crop'
   }
 ];
 
