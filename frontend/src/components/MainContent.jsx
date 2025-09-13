@@ -61,14 +61,7 @@ const MainContent = ({ currentView, selectedPlaylist, onBack, searchQuery }) => 
   );
 
   if (currentView === 'search') {
-    return (
-      <div className="flex-1 bg-gradient-to-b from-gray-900 to-black p-6">
-        <h1 className="text-2xl font-bold text-white mb-8">Search Spotify</h1>
-        <div className="text-gray-400 text-center mt-20">
-          Start typing to search for music, artists, albums, and more...
-        </div>
-      </div>
-    );
+    return <SearchResults searchQuery={searchQuery} />;
   }
 
   if (currentView === 'playlist' && selectedPlaylist) {
