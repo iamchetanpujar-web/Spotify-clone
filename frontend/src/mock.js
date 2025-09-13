@@ -306,13 +306,13 @@ export const mockDailyMixes = [
   {
     id: 'dm1',
     title: 'Daily Mix 1',
-    subtitle: 'Vismay Patel, Anuv Jain, Dream Note and more',
+    subtitle: 'Taylor Swift, Ariana Grande, Dua Lipa and more',
     image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop'
   },
   {
     id: 'dm2',
     title: 'Daily Mix 2',
-    subtitle: 'Maroon 5, Lady Gaga, Olivia Rodrigo and more',
+    subtitle: 'The Weeknd, Drake, Post Malone and more',
     image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop'
   },
   {
@@ -324,14 +324,20 @@ export const mockDailyMixes = [
   {
     id: 'dm4',
     title: 'Daily Mix 4',
-    subtitle: 'Ali Ok, Raghu Dixit, Charanji MR and more',
+    subtitle: 'Billie Eilish, Lorde, Phoebe Bridgers and more',
     image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop'
   },
   {
     id: 'dm5',
     title: 'Daily Mix 5',
-    subtitle: 'Boyband, Leavt and more',
+    subtitle: 'Imagine Dragons, OneRepublic, Maroon 5 and more',
     image: 'https://images.pexels.com/photos/2885788/pexels-photo-2885788.jpeg?w=300&h=300&fit=crop'
+  },
+  {
+    id: 'dm6',
+    title: 'Daily Mix 6',
+    subtitle: 'Eminem, Kendrick Lamar, J. Cole and more',
+    image: 'https://images.unsplash.com/photo-1629923759854-156b88c433aa?w=300&h=300&fit=crop'
   }
 ];
 
