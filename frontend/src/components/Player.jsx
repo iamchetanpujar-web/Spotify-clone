@@ -202,7 +202,7 @@ const Player = ({ onRightPanelToggle, isRightPanelVisible }) => {
           >
             <div 
               className="h-full bg-white rounded-full relative group-hover:bg-green-500 transition-colors"
-              style={{ width: `${isMuted ? 0 : volume}%` }}
+              style={{ width: `${isMuted ? 0 : volume * 100}%` }}
             >
               <div className="absolute -right-1.5 -top-1 w-3 h-3 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
