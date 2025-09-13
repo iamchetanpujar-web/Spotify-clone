@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { useAudio } from './AudioManager';
 
-const Player = ({ onRightPanelToggle, isRightPanelVisible }) => {
+const Player = ({ onRightPanelToggle, isRightPanelVisible, onNowPlayingToggle }) => {
   const {
     currentTrack,
     isPlaying,
