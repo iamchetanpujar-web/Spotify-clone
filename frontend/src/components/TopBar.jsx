@@ -43,11 +43,22 @@ const TopBar = ({ onSearch, currentView }) => {
 
       {/* User Profile */}
       <div className="flex items-center gap-4">
-        <button className="text-sm font-medium text-white hover:underline">
+        <button className="flex items-center gap-2 text-sm font-medium text-white hover:underline transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
           Install App
         </button>
         
-        <div className="flex items-center gap-2">
+        <button className="p-2 hover:bg-gray-800 rounded-full transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-gray-400">
+            <circle cx="12" cy="12" r="1"/>
+            <circle cx="19" cy="12" r="1"/>
+            <circle cx="5" cy="12" r="1"/>
+          </svg>
+        </button>
+        
+        <div className="flex items-center gap-2 cursor-pointer hover:bg-gray-800 rounded-full p-1 transition-colors">
           <button className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-black font-bold text-sm hover:scale-105 transition-transform">
             C
           </button>
