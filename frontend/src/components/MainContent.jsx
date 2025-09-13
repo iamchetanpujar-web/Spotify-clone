@@ -1,6 +1,13 @@
 import React from 'react';
 import { Play, Pause, MoreHorizontal } from 'lucide-react';
-import { mockDailyMixes, mockJafikiData, mockRecentlyPlayed, mockSongs } from '../mock';
+import { 
+  mockDailyMixes, 
+  mockDiscoverWeekly, 
+  mockRecentlyPlayed, 
+  mockPopularPlaylists,
+  mockFeaturedArtists,
+  mockSongs 
+} from '../mock';
 import { useAudio } from './AudioManager';
 import PlaylistView from './PlaylistView';
 import SearchResults from './SearchResults';
