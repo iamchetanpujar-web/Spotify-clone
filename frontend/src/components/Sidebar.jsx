@@ -13,12 +13,11 @@ const Sidebar = ({ onNavigate, currentView }) => {
     <div className="w-64 bg-black text-white flex flex-col h-full">
       {/* Main Navigation */}
       <div className="p-6">
-        <div className="flex items-center gap-2 mb-8">
-          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-            <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full"></div>
-            </div>
-          </div>
+        <div className="flex items-center gap-3 mb-8">
+          <svg width="32" height="32" viewBox="0 0 168 168" className="text-white">
+            <path fill="currentColor" d="M83.996 0.277C37.747 0.277 0.253 37.77 0.253 84.019c0 46.251 37.494 83.741 83.743 83.741c46.254 0 83.744-37.49 83.744-83.741C167.74 37.77 130.25 0.277 83.996 0.277z M122.352 121.298c-1.8 2.947-5.622 3.874-8.573 2.072c-23.478-14.348-53.044-17.604-87.837-9.645c-3.363 0.769-6.728-1.331-7.499-4.696c-0.769-3.363 1.331-6.729 4.696-7.499c38.061-8.707 70.861-4.953 97.131 11.185C123.221 114.517 124.152 118.344 122.352 121.298z M132.312 98.481c-2.269 3.691-7.108 4.85-10.804 2.583c-26.845-16.522-67.677-21.297-99.423-11.646c-4.328 1.317-8.902-1.124-10.221-5.456c-1.317-4.329 1.124-8.901 5.456-10.221c36.417-11.073 81.586-5.568 113.098 13.334C134.106 89.344 135.265 94.187 132.312 98.481z M133.24 74.939c-32.172-19.102-85.262-20.881-115.939-11.559c-5.181 1.574-10.653-1.349-12.231-6.526c-1.574-5.181 1.349-10.651 6.526-12.231c35.61-10.833 95.188-8.759 132.548 13.347c4.444 2.624 5.903 8.318 3.276 12.765C144.796 75.181 139.102 76.64 133.24 74.939z"/>
+          </svg>
+          <span className="text-white font-bold text-xl">Spotify</span>
         </div>
         
         <nav className="space-y-4">
