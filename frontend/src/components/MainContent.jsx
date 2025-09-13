@@ -20,7 +20,19 @@ const MainContent = ({ currentView, selectedPlaylist, onBack }) => {
     </button>
   );
 
-  const MusicCard = ({ item, showArtist = true, onPlay }) => (
+  const handleCardPlay = (item) => {
+    // If it's a daily mix, play the first song from a related playlist
+    if (item.id.startsWith('dm')) {
+      const sampleSongs = Object.keys(mockSongs).slice(0, 5);
+      playTrack(sampleSongs[0], sampleSongs, 0);
+    } else {
+      // Play individual track
+      const songId = Object.keys(mockSongs)[0]; // Default to first song
+      playTrack(songId, [songId], 0);
+    }
+  };
+
+  const MusicCard = ({ item, showArtist = true }) => (
     <div className="bg-gray-900 p-4 rounded-lg hover:bg-gray-800 transition-colors group cursor-pointer">
       <div className="relative mb-4">
         <img 
