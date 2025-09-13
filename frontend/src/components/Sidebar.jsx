@@ -85,7 +85,15 @@ const Sidebar = ({ onNavigate, currentView }) => {
             <div 
               key={playlist.id}
               className="flex items-center gap-3 p-2 hover:bg-gray-800 rounded-md cursor-pointer transition-colors group"
-              onClick={() => onNavigate('playlist', playlist)}
+              onClick={() => {
+                if (playlist.type === 'artist') {
+                  onNavigate('artist', playlist);
+                } else if (playlist.type === 'album') {
+                  onNavigate('album', playlist);
+                } else {
+                  onNavigate('playlist', playlist);
+                }
+              }}
             >
               <div className="w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-700">
                 {playlist.isLiked ? (
