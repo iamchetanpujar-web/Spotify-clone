@@ -85,6 +85,13 @@ function App() {
         <Player
           onRightPanelToggle={toggleRightPanel}
           isRightPanelVisible={isRightPanelVisible}
+          onNowPlayingToggle={toggleNowPlaying}
+        />
+        
+        {/* Now Playing Modal */}
+        <NowPlayingModal
+          isVisible={isNowPlayingVisible}
+          onClose={() => setIsNowPlayingVisible(false)}
         />
         
         {/* Keyboard Shortcuts Indicator */}
