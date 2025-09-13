@@ -39,53 +39,46 @@ function App() {
   };
 
   return (
-    <div className="h-screen bg-black text-white flex flex-col overflow-hidden">
-      {/* Top Bar */}
-      <TopBar 
-        onSearch={handleSearch}
-        currentView={currentView}
-      />
-      
-      {/* Main Layout */}
-      <div className="flex-1 flex overflow-hidden">
-        {/* Sidebar */}
-        <Sidebar 
-          onNavigate={handleNavigation}
+    <AudioProvider>
+      <div className="h-screen bg-black text-white flex flex-col overflow-hidden">
+        {/* Top Bar */}
+        <TopBar 
+          onSearch={handleSearch}
           currentView={currentView}
         />
         
-        {/* Main Content */}
-        <MainContent
-          currentView={currentView}
-          selectedPlaylist={selectedPlaylist}
-          isPlaying={isPlaying}
-          onPlayPause={handlePlayPause}
-          currentTrack={currentTrack}
-          onTrackSelect={handleTrackSelect}
-          searchQuery={searchQuery}
-        />
-        
-        {/* Right Panel */}
-        {isRightPanelVisible && (
-          <RightPanel
-            currentTrack={currentTrack}
-            isVisible={isRightPanelVisible}
-            onClose={() => setIsRightPanelVisible(false)}
+        {/* Main Layout */}
+        <div className="flex-1 flex overflow-hidden">
+          {/* Sidebar */}
+          <Sidebar 
+            onNavigate={handleNavigation}
+            currentView={currentView}
           />
-        )}
-      </div>
+          
+          {/* Main Content */}
+          <MainContent
+            currentView={currentView}
+            selectedPlaylist={selectedPlaylist}
+            onBack={handleBack}
+            searchQuery={searchQuery}
+          />
+          
+          {/* Right Panel */}
+          {isRightPanelVisible && (
+            <RightPanel
+              isVisible={isRightPanelVisible}
+              onClose={() => setIsRightPanelVisible(false)}
+            />
+          )}
+        </div>
 
-      {/* Player */}
-      <Player
-        currentTrack={currentTrack}
-        isPlaying={isPlaying}
-        onPlayPause={handlePlayPause}
-        onNext={handleNext}
-        onPrevious={handlePrevious}
-        onRightPanelToggle={toggleRightPanel}
-        isRightPanelVisible={isRightPanelVisible}
-      />
-    </div>
+        {/* Player */}
+        <Player
+          onRightPanelToggle={toggleRightPanel}
+          isRightPanelVisible={isRightPanelVisible}
+        />
+      </div>
+    </AudioProvider>
   );
 }
 
