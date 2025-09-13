@@ -5,6 +5,7 @@ import TopBar from './components/TopBar';
 import MainContent from './components/MainContent';
 import RightPanel from './components/RightPanel';
 import Player from './components/Player';
+import NowPlayingModal from './components/NowPlayingModal';
 import { AudioProvider } from './components/AudioManager';
 import KeyboardShortcuts from './components/KeyboardShortcuts';
 
