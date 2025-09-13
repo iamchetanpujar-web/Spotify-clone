@@ -162,13 +162,13 @@ const Player = ({ onRightPanelToggle, isRightPanelVisible }) => {
           >
             <div 
               className="h-full bg-white rounded-full relative group-hover:bg-green-500 transition-colors"
-              style={{ width: `${(currentTime / currentTrack.duration) * 100}%` }}
+              style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
             >
               <div className="absolute -right-1.5 -top-1 w-3 h-3 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
           </div>
           <span className="text-xs text-gray-400 w-10">
-            {formatTime(currentTrack.duration)}
+            {formatTime(duration)}
           </span>
         </div>
       </div>
