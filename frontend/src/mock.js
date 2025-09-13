@@ -165,6 +165,90 @@ export const mockSongs = {
     image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop',
     audioUrl: sampleAudioUrls[4],
     genre: 'Pop'
+  },
+  // Taylor Swift songs
+  'ts1': {
+    id: 'ts1',
+    title: 'Anti-Hero',
+    artist: 'Taylor Swift',
+    album: 'Midnights',
+    duration: 201,
+    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop',
+    audioUrl: sampleAudioUrls[0],
+    genre: 'Pop'
+  },
+  'ts2': {
+    id: 'ts2',
+    title: 'Shake It Off',
+    artist: 'Taylor Swift',
+    album: '1989',
+    duration: 219,
+    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop',
+    audioUrl: sampleAudioUrls[1],
+    genre: 'Pop'
+  },
+  // Drake songs
+  'dr1': {
+    id: 'dr1',
+    title: 'God\'s Plan',
+    artist: 'Drake',
+    album: 'Scorpion',
+    duration: 199,
+    image: 'https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?w=300&h=300&fit=crop',
+    audioUrl: sampleAudioUrls[2],
+    genre: 'Hip Hop'
+  },
+  'dr2': {
+    id: 'dr2',
+    title: 'Hotline Bling',
+    artist: 'Drake',
+    album: 'Views',
+    duration: 267,
+    image: 'https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?w=300&h=300&fit=crop',
+    audioUrl: sampleAudioUrls[3],
+    genre: 'Hip Hop'
+  },
+  // Ariana Grande songs
+  'ag1': {
+    id: 'ag1',
+    title: 'Positions',
+    artist: 'Ariana Grande',
+    album: 'Positions',
+    duration: 172,
+    image: 'https://images.pexels.com/photos/9001962/pexels-photo-9001962.jpeg?w=300&h=300&fit=crop',
+    audioUrl: sampleAudioUrls[4],
+    genre: 'Pop'
+  },
+  'ag2': {
+    id: 'ag2',
+    title: 'Thank U, Next',
+    artist: 'Ariana Grande',
+    album: 'Thank U, Next',
+    duration: 207,
+    image: 'https://images.pexels.com/photos/9001962/pexels-photo-9001962.jpeg?w=300&h=300&fit=crop',
+    audioUrl: sampleAudioUrls[0],
+    genre: 'Pop'
+  },
+  // Dua Lipa songs
+  'dl1': {
+    id: 'dl1',
+    title: 'Levitating',
+    artist: 'Dua Lipa',
+    album: 'Future Nostalgia',
+    duration: 203,
+    image: 'https://images.unsplash.com/photo-1501837303764-ada599fdac6c?w=300&h=300&fit=crop',
+    audioUrl: sampleAudioUrls[1],
+    genre: 'Pop'
+  },
+  'dl2': {
+    id: 'dl2',
+    title: 'Don\'t Start Now',
+    artist: 'Dua Lipa',
+    album: 'Future Nostalgia',
+    duration: 183,
+    image: 'https://images.unsplash.com/photo-1501837303764-ada599fdac6c?w=300&h=300&fit=crop',
+    audioUrl: sampleAudioUrls[2],
+    genre: 'Pop'
   }
 };
 
