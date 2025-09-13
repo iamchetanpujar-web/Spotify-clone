@@ -110,19 +110,22 @@ const Player = ({ onRightPanelToggle, isRightPanelVisible }) => {
       <div className="flex-1 flex flex-col items-center gap-2 px-4">
         <div className="flex items-center gap-4">
           <button 
-            onClick={() => setIsShuffled(!isShuffled)}
+            onClick={toggleShuffle}
             className={`transition-colors ${isShuffled ? 'text-green-500' : 'text-gray-400 hover:text-white'}`}
           >
             <Shuffle size={16} />
+            {isShuffled && (
+              <div className="w-1 h-1 bg-green-500 rounded-full absolute -bottom-1"></div>
+            )}
           </button>
           <button 
-            onClick={onPrevious}
+            onClick={handlePrevious}
             className="text-gray-400 hover:text-white transition-colors"
           >
             <SkipBack size={16} />
           </button>
           <button 
-            onClick={onPlayPause}
+            onClick={togglePlayPause}
             className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-105 transition-all"
           >
             {isPlaying ? (
@@ -132,18 +135,18 @@ const Player = ({ onRightPanelToggle, isRightPanelVisible }) => {
             )}
           </button>
           <button 
-            onClick={onNext}
+            onClick={handleNext}
             className="text-gray-400 hover:text-white transition-colors"
           >
             <SkipForward size={16} />
           </button>
           <button 
-            onClick={() => setRepeatMode((repeatMode + 1) % 3)}
-            className={`transition-colors ${repeatMode > 0 ? 'text-green-500' : 'text-gray-400 hover:text-white'}`}
+            onClick={toggleRepeat}
+            className={`relative transition-colors ${repeatMode > 0 ? 'text-green-500' : 'text-gray-400 hover:text-white'}`}
           >
             <Repeat size={16} />
             {repeatMode === 2 && (
-              <div className="w-1 h-1 bg-green-500 rounded-full absolute -bottom-1"></div>
+              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-green-500 rounded-full"></div>
             )}
           </button>
         </div>
