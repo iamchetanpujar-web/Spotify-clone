@@ -44,7 +44,7 @@ const MainContent = ({ currentView, selectedPlaylist, onBack }) => {
           }}
         />
         <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-          <PlayButton onClick={onPlay} />
+          <PlayButton onClick={() => handleCardPlay(item)} />
         </div>
       </div>
       <div className="space-y-1">
