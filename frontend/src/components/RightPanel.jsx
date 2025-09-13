@@ -1,8 +1,11 @@
 import React from 'react';
 import { MoreHorizontal, ExternalLink, X } from 'lucide-react';
 import { mockRelatedVideos } from '../mock';
+import { useAudio } from './AudioManager';
 
-const RightPanel = ({ currentTrack, isVisible, onClose }) => {
+const RightPanel = ({ isVisible, onClose }) => {
+  const { currentTrack } = useAudio();
+  
   if (!isVisible || !currentTrack) return null;
 
   return (
